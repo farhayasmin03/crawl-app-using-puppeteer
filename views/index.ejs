@@ -1,22 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-     <form action="/url" method="POST" >
-        <input type="url" >
-        <button onclick="run()" id="button">Run</button>
-    </form> 
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <!-- <script type="text/javascript">
-        function run(){
-            alert("hello");
-        }
+    <link rel="icon" href="/images/fav-3.png" type="image/png">
 
-    </script> -->
-</body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/app.css">
+
+    <title>Crawl App</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <header>
+            <h1><a href="/">Crawl App</a></h1>
+        </header>
+        <div class="content">
+            <form action="/url" method="POST" >
+                <div class="row">
+                    <div class="col">
+                        <input class="form-control" type="url" >
+                    </div>
+                    <div class="col">
+                            <button class="btn btn-info" onclick="run()" id="button">Fetch data</button>
+                    </div>
+                </div>
+            </form>
+            <br/>
+            <table class="table">
+                <tr>
+                    <td>Title</td>
+                    <td>Value</td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>Value</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+  </body>
 </html>

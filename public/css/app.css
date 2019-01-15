@@ -1,0 +1,11 @@
+header{
+    padding: 40px 0;
+}
+
+header h1{
+    text-align: center;
+}
+
+header h1 a{
+    color: black;
+}
