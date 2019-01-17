@@ -1,40 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link rel="icon" href="/images/fav-3.png" type="image/png">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="/css/app.css">
 
     <title>Crawl App</title>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <div class="container">
         <header>
             <h1><a href="/">Crawl App</a></h1>
         </header>
         <div class="content">
-            <form action="/url" method="POST" >
+            <form action="/url" method="POST">
                 <div class="row">
                     <div class="col">
-                        <input class="form-control" type="url" >
+                        <input class="form-control" type="url" name="url" id="url">
                     </div>
                     <div class="col">
-                            <button class="btn btn-info" onclick="run()" id="button">Fetch data</button>
+                        <button class="btn btn-info" onclick="run()" id="button">Fetch data</button>
                     </div>
                 </div>
             </form>
-            <br/>
+            <br />
             <table class="table">
                 <tr>
                     <td>Title</td>
-                    <td>Value</td>
+                    <td id="title-value"></td>
                 </tr>
                 <tr>
                     <td>Title</td>
@@ -43,5 +46,15 @@
             </table>
         </div>
     </div>
-  </body>
+<!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>--> 
+
+    <script type="text/javascript">
+        function run(){
+            alert(document.getElementById("url").value)
+            console.log(document.getElementById("url").value)
+        }
+    </script>
+</body>
+
 </html>
