@@ -11,6 +11,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(bodyParser.json());
 app.get("/", function (req, res) {
     res.render("index");
 })
@@ -32,21 +33,19 @@ app.post('/url', function (req, res) {
         await page.addScriptTag({
             url: 'https://code.jquery.com/jquery-3.2.1.min.js'
         });
-        console.log(await page.title());
-        await page.evaluate(() => {
+        const title = await page.title();
+        
+        res.json({ title: title });
+        /* await page.evaluate(() => {
             document.querySelector('button').click()
         });
         document.querySelector(title - value).innerHTML.title
         const textContent = await page.evaluate(() => document.querySelector('p').textContent);
         const innerText = await page.evaluate(() => document.querySelector('p').innerText);
         console.log(textContent);
-        console.log(innerText);
+        console.log(innerText); */
         await browser.close();
     })();
-    request(url, function (error, response, body) {
-        var header = console.log(response.headers)
-
-    })
 })
 
 
